@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart BT
-  v8 --> node[Node.js]
+  v8[V8] --> node[Node.js]
   v8 --> chromium[Chromium]
   v8 --> workerd
   v8 --> deno[Deno]
@@ -12,13 +12,18 @@ flowchart BT
   swc --> rspack[Rspack]
   swc --> rollup[Rollup]
   swc --> turbopack[Turbopack]
+  swc --> nextjs[Next.js]
+  turbopack --> nextjs
+  webpack --> nextjs
   swc --> parcel[Parcel]
   lightningcss --> parcel
+  oxc[Oxc] --> rolldown[Rolldown]
+  rolldown -.-> vite
   rollup --> vite
+  esbuild --> vite
   biome[Biome]
   esbuild
   jsc[JavaScriptCore] --> bun[Bun]
-  oxc[Oxc] --> rolldown[Rolldown]
   spider_monkey --> gecko[Gecko]
   acorn[Acorn] --> webpack
   acorn --> espree[Espree]
@@ -88,6 +93,11 @@ flowchart BT
   - JavaScript runtime
 - [workerd](https://github.com/cloudflare/workerd)
   - JavaScript runtime
+
+## Framework
+
+- [Next.js](https://nextjs.org/)
+  - JavaScript framework
 
 ## Browser
 
